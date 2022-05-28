@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-dado-pai',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dado-pai.component.css']
 })
 export class DadoPaiComponent implements OnInit {
+  @Input() name: string =' ';
+  @Input() userData!: {email: string; role: string}
+
 
   constructor() { }
 
